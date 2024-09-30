@@ -1,0 +1,32 @@
+body {
+    margin: 0; /* Remove margens padrão do body */
+    padding: 0; /* Remove padding padrão do body */
+}
+
+.footer {
+    background-color: #634949; /* Cor de fundo */
+    display: flex; /* Usando flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 0; /* Reduz o padding para deixar o footer mais fino */
+    position: fixed; /* Fixa o footer na parte inferior */
+    bottom: 0; /* Alinha ao fundo da página */
+    width: 100%; /* Largura total */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    z-index: 1000; /* Garante que o footer esteja acima de outros elementos */
+}
+
+.p {
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove margens padrão */
+    font-size: 14px; /* Reduz o tamanho da fonte para deixar o footer mais fino */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .p {
+        font-size: 12px; /* Ajusta o tamanho da fonte em telas menores */
+    }
+}
+

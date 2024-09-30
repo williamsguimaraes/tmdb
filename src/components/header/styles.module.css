@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #634949;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o logo */
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+/* Ícone de menu sanduíche no canto direito (somente em telas pequenas) */
+.hamburger {
+  display: none; /* Escondido por padrão */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Links do menu */
+.linksContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Links escondidos no mobile */
+.linksContainer.showMenu {
+  display: block;
+}
+
+/* Estilo do link */
+.link {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Hover nos links */
+.link:hover {
+  color: #f39c12;
+}
+
+/* Media queries para telas menores */
+@media (max-width: 768px) {
+  /* O hambúrguer só aparece em telas pequenas */
+  .hamburger {
+    display: flex; /* Agora visível */
+  }
+
+  .linksContainer {
+    display: none;
+    flex-direction: column;
+    background-color: #634949;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    padding-bottom: 20px; /* Espaço extra no final */
+  }
+
+  .linksContainer.showMenu {
+    display: flex;
+  }
+
+  .link {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    background-color: #634949;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .link {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 35px;
+  }
+}

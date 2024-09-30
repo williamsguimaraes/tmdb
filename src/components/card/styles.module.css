@@ -1,0 +1,83 @@
+/* Estilos do contêiner que envolve os cards */
+.cardContainer {
+  display: flex; /* Ativa o flexbox no contêiner */
+  flex-wrap: wrap; /* Permite que os cards quebrem linha */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  padding: 1rem; /* Adiciona espaçamento interno ao contêiner */
+  gap: 1rem; /* Espaçamento entre os cards */
+}
+
+/* Estilos gerais do card */
+.movieCard {
+  display: flex;
+  background-color: #555;
+  flex-direction: column; /* Organiza os elementos do card em coluna */
+  border: 1px solid #ccc; /* Borda do card */
+  border-radius: 8px; /* Bordas arredondadas */
+  overflow: hidden; /* Oculta conteúdo que ultrapassa as bordas */
+  transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
+  max-width: 300px; /* Largura máxima do card */
+  width: 100%; /* Largura total do card */
+}
+
+/* Efeito de hover */
+.movieCard:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do card ao passar o mouse */
+}
+
+/* Estilos da imagem do poster */
+.moviePoster {
+  width: 100%; /* A imagem ocupa 100% da largura do card */
+  height: auto; /* Altura automática para manter a proporção */
+}
+
+/* Estilos da informação do filme */
+.movieInfo {
+  padding: 1rem; /* Espaçamento interno do card */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Título do filme */
+.movieInfo h3 {
+  font-size: 1.25rem; /* Tamanho da fonte para o título */
+  margin: 0.5rem 0; /* Margem superior e inferior */
+}
+
+/* Nota do filme */
+.movieInfo p {
+  font-size: 1rem; /* Tamanho da fonte para a nota */
+  color: #050505; /* Cor do texto da nota */
+}
+
+/* Media queries para responsividade */
+@media (min-width: 600px) {
+  .cardContainer {
+    gap: 1.5rem; /* Aumenta o espaçamento entre os cards em telas maiores */
+  }
+
+  .movieCard {
+    max-width: 400px; /* Aumenta a largura máxima dos cards em telas maiores */
+  }
+
+  .movieInfo h3 {
+    font-size: 1.5rem; /* Aumenta o tamanho da fonte para o título */
+  }
+
+  .movieInfo p {
+    font-size: 1.1rem; /* Aumenta o tamanho da fonte para a nota */
+  }
+}
+
+@media (min-width: 900px) {
+  .movieCard {
+    max-width: 500px; /* Aumenta ainda mais a largura máxima dos cards */
+  }
+
+  .movieInfo h3 {
+    font-size: 1.75rem; /* Tamanho maior do título em telas grandes */
+  }
+
+  .movieInfo p {
+    font-size: 1.25rem; /* Tamanho maior da nota em telas grandes */
+  }
+}

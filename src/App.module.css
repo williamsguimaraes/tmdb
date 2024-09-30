@@ -1,0 +1,34 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: #f5f5f5; /* Cor de fundo da aplicação */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid responsivo */
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .cardContainer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta o grid em telas menores */
+        gap: 15px;
+    }
+}
