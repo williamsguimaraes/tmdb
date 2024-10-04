@@ -1,11 +1,15 @@
-import PropTypes from 'prop-types';
-import Styles from './styles.module.css';
+import PropTypes from "prop-types";
+import Styles from "./Styles.module.css";
 
 const MovieCard = ({ movie }) => {
-  const IMG_URL = import.meta.env.VITE_IMG;
+  const IMG_URL = process.env.REACT_APP_IMG;
   return (
     <div className={Styles.movieCard}>
-      <img src={`${IMG_URL}${movie.poster_path}`} alt={movie.title} className={Styles.moviePoster} />
+      <img
+        src={`${IMG_URL}${movie.poster_path}`}
+        alt={movie.title}
+        className={Styles.moviePoster}
+      />
       <div className={Styles.movieInfo}>
         <h3>{movie.title}</h3>
         <p>Nota: {movie.vote_average}</p>

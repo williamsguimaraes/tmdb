@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import img from '../../img/iconMovie.webp';
-import Styles from './styles.module.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import img from "../../img/iconMovie.webp";
+import Styles from "./styles.module.css";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,10 +25,20 @@ const Header = () => {
       </div>
 
       {/* Links no lado direito */}
-      <nav className={`${Styles.linksContainer} ${menuOpen ? Styles.showMenu : ''}`}>
-        <Link to="/" className={Styles.link}>Home</Link>
-        <Link to="/favoritos" className={Styles.link}>Favoritos</Link>
-        <Link to="/populares" className={Styles.link}>Populares</Link>
+      <nav
+        className={`${Styles.linksContainer} ${
+          menuOpen ? Styles.showMenu : ""
+        }`}
+      >
+        <Link to="/" className={Styles.link}>
+          Home
+        </Link>
+        <Link to="/favoritos" className={Styles.link}>
+          Favoritos
+        </Link>
+        <Link to="/populares" className={Styles.link}>
+          Populares
+        </Link>
       </nav>
     </header>
   );
